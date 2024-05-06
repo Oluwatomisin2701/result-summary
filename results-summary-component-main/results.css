@@ -1,0 +1,209 @@
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root{
+    --light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --Hanken-Grotesk: 'Hanken Grotesk';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow:  0px 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.result{
+    text-align: center;
+    width: 50%;
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 15px;
+    padding: 20px 10px;
+}
+
+.score{
+    width: 60%;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 auto;
+    background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+.result p{
+    font-family: var(--Hanken-Grotesk);
+    color: var(--light-lavender);
+    font-weight: 700;
+}
+
+#score{
+    width: 85%;
+    margin: 0 auto 25px;
+}
+
+#move{
+    margin-top: -40px;
+}
+
+h1{
+    color: white;
+    font-family: var(--Hanken-Grotesk);
+    font-size: 3.5em;
+}
+
+h3{
+    color: white;
+    font-family: var(--Hanken-Grotesk);
+    font-size: 2em;
+}
+
+.summary{
+    width: 50%;
+    padding: 0 20px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.label{
+    display: flex;
+}
+
+.label img{
+    margin-right: 10px;
+}
+
+#reaction{
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+#memory{
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+#verbal{
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+#visual{
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+#reaction .label p{
+    color: var(--light-red);
+    font-family: var(--Hanken-Grotesk);
+    font-weight: 700;
+}
+
+#memory .label p{
+    color: var(--Orangey-yellow);
+    font-family: var(--Hanken-Grotesk);
+    font-weight: 700;
+}
+
+#verbal .label p{
+    color: var(--Green-teal);
+    font-family: var(--Hanken-Grotesk);
+    font-weight: 700;
+}
+
+#visual .label p{
+    color: var(--Cobalt-blue);
+    font-family: var(--Hanken-Grotesk);
+    font-weight: 700;
+}
+
+.flex p{
+    font-family: var(--Hanken-Grotesk);
+    color: var(--light-lavender);
+    font-weight: 800;
+}
+
+span{
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+
+h2{
+    font-family: var(--Hanken-Grotesk);
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+button{
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    background-color: var(--Dark-gray-blue);
+    color: white;
+    font-family: var(--Hanken-Grotesk);
+    border-radius: 50px;
+    margin: 23px 0;
+    transition: .6s ease-in-out;
+}
+
+button:hover{
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .container{
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 70%;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        flex-direction: column;
+        box-shadow: none;
+    }
+    .result,
+    .summary{
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    
+    .result,
+    .summary{
+        width: 100%;
+    }
+}
